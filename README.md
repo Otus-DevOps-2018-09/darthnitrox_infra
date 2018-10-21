@@ -1,7 +1,7 @@
 # darthnitrox_infra
 darthnitrox Infra repository
 
-#Google Cloud Platform Bastion Host 
+# Google Cloud Platform Bastion Host 
 
 - 
 - Для подключения к хосту someinternalhost(с локальным ip адресом )  
