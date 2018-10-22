@@ -21,9 +21,6 @@ Host someinternalhost
 ```
 После этих настроек можно подключаться к someinternalhost введя одну комманду ssh someinternalhost
 
-2. 
-
-3.
-bastion_IP = 35.211.203.150
-someinternalhost_IP = 10.156.0.2
+bastion_IP = 35.211.203.150  
+someinternalhost_IP = 10.156.0.2  
     
