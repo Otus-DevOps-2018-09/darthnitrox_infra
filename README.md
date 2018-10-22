@@ -3,7 +3,6 @@ darthnitrox Infra repository
 
 # Google Cloud Platform Bastion Host 
 
-- 
 - Для подключения к хосту someinternalhost(с локальным ip адресом )  
 Нужно добавить следующие строки в ~/.ssh/config  
 
@@ -21,3 +20,10 @@ Host someinternalhost
 
 ```
 После этих настроек можно подключаться к someinternalhost введя одну комманду ssh someinternalhost
+
+2. 
+
+3.
+bastion_IP = 35.211.203.150
+someinternalhost_IP = 10.156.0.2
+    
