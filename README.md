@@ -9,12 +9,12 @@ darthnitrox Infra repository
 ```
 Host bastion
   Hostname 35.211.203.150
-  User appuserwindows
+  User appuser
   IdentityFile ~/.ssh/appuser
 
 Host someinternalhost
   Hostname 10.156.0.2
-  User appuserwindows
+  User appuser
   ProxyCommand ssh -W %h:%p bastion
   IdentityFile ~/.ssh/appuser
 
