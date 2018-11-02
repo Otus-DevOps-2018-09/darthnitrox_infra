@@ -35,7 +35,7 @@ gcloud compute instances create reddit-app\
   --image-project=ubuntu-os-cloud \ 
   --machine-type=g1-small \ 
   --tags puma-server \
-  ----metadata-from-file startup-script=startup.sh \ 
+  --metadata-from-file startup-script=startup.sh \ 
   --restart-on-failure
 ```
 
