@@ -23,4 +23,8 @@ Host someinternalhost
 
 bastion_IP = 35.211.203.150  
 someinternalhost_IP = 10.156.0.2  
+
+# cloud-testapp
+testapp_IP = 35.198.167.169
+testapp_port = 9292 
     
