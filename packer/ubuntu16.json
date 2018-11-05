@@ -1,6 +1,10 @@
 {
     "variables":{
-        "machine_type" : "f1-micro"
+        "machine_type" : "f1-micro",
+        "disk_size": "20GB",
+        "disk_type": "pd-standart",
+        "network_name": "default",
+        "tags_list": "reddit-app"
     },
 
     "builders" : [
@@ -9,10 +13,15 @@
             "project_id": "{{user `project_id`}}",
             "image_name": "reddit-base-{{timestamp}}",
             "image_family": "reddit-base",
+            "image_description": "Base Image For Reddit Apllication",
             "source_image_family": "{{user `source_image_family`}}",
             "zone": "europe-west1-b",
             "ssh_username": "appuser",
-            "machine_type": "{{user `machine_type`}}"
+            "machine_type": "{{user `machine_type`}}",
+            "disk_size": "{{user `disk_size`}}",
+            "disk_type": "{{user `disk_type`}}",
+            "network": "{{user `network_name`}}",
+            "tags": "{{user `tags_list`}}"
         }
     ],
 
