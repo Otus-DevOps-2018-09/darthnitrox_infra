@@ -1,9 +1,4 @@
 {
 		"project_id" : "MY_PROJECT_ID",
 		"source_image_family": "MY_INPUT_IMAGE"
-		"image_description" : "You image description",
-		"disk_size": "Size you disk",
-		"disk_type": "Type disk",
-		"network": "NAME network GCP (default)",
-		"tags": "Tags for firewall network"
 }
