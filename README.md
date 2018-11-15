@@ -63,4 +63,5 @@ immutable.json использует из packer/scripts/deploy.sh - развер
 ```
 packer build --var-file=ВАШ_VARFILE  ubuntu16.json
 ```
-Справидливо для создания bake образа меняем название шаблона на immutable.json
+Справидливо для создания bake образа меняем название шаблона на immutable.json  
+Для равертывания виртуальной машины модно использовать скрипт из дирректории  config-scripts/create-reddit-vm.sh NAME_VM (передав название виртуальной машины в качетве аргумента скрипту)
