@@ -58,7 +58,7 @@ gcloud compute firewall-rules create default-puma-server \
 `Название скриптов соотвествует их задаче`  
 immutable.json использует из packer/scripts/deploy.sh - развертывание приложения и packer/scripts/settings_systemd.sh - Для настройки systemd демона для старта приложения после создания виртуальной машины
 
-### Для сборки образа бещ приложения
+### Для сборки образа без приложения
 Для сборки нужно выполнить следующую комманду
 ```
 packer build --var-file=ВАШ_VARFILE  ubuntu16.json
