@@ -1,0 +1,6 @@
+project = "your_project_id"
+region = "start_vm_region (default europe-west3)"
+zone = "start_vm_zone (default europe-west3-b)"
+public_key_path = "~/.ssh/appuser.pub"
+private_key_path = "~/.ssh/appuser"
+disk_image = "reddit-base"
