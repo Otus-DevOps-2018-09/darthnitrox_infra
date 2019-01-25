@@ -1,0 +1,11 @@
+[Unit]
+Description=Puma Ruby Application
+
+[Service]
+User=appuser
+Group=appuser
+WorkingDirectory=/home/appuser/reddit
+ExecStart=/usr/local/bin/puma
+
+[Install]
+WantedBy=multi-user.target
