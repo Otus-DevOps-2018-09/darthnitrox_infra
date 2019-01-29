@@ -11,7 +11,7 @@
         {
             "type": "googlecompute",
             "project_id": "{{user `project_id`}}",
-            "image_name": "redditapp-{{timestamp}}",
+            "image_name": "reddit-app-base",
             "image_family": "application",
             "image_description": "Application Image reddit app",
             "source_image_family": "{{user `source_image_family`}}",

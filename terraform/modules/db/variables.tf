@@ -13,7 +13,7 @@ variable db_disk_image {
 }
 
 variable "network_name" {
-  description = "Netork name"
+  description = "Network name"
   default = "default"
 }
 
