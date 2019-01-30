@@ -11,11 +11,11 @@
         {
             "type": "googlecompute",
             "project_id": "{{user `project_id`}}",
-            "image_name": "reddit-full",
+            "image_name": "reddit-full-base-2",
             "image_family": "reddit-base",
             "image_description": "Image is Reddit Apllication",
             "source_image_family": "{{user `source_image_family`}}",
-            "zone": "europe-west1-b",
+            "zone": "europe-west1-c",
             "ssh_username": "appuser",
             "machine_type": "{{user `machine_type`}}",
             "disk_size": "{{user `disk_size`}}",
@@ -27,14 +27,21 @@
 
     "provisioners": [
         {
-        "type": "shell",
-        "script": "scripts/deploy.sh",
-        "execute_command": "sudo {{.Path}}"
+            "type": "shell",
+            "script": "scripts/deploy.sh",
+            "execute_command": "sudo {{.Path}}"
         },
+
         {
-        "type": "shell",
-        "script": "scripts/settings_systemd.sh",
-        "execute_command": "sudo {{.Path}}"
+            "type": "file",
+            "source": "files/puma.service",
+            "destination" : "/tmp/puma.service"
+        },
+
+        {
+            "type": "shell",
+            "script": "scripts/settings_systemd.sh",
+            "execute_command": "sudo {{.Path}}"
         }
     ]
 }
