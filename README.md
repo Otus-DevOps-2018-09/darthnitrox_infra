@@ -80,3 +80,6 @@ packer build --var-file=ВАШ_VARFILE  ubuntu16.json
 Было разделено по окружением вызов модулей (prod,stage)
 Были созданы storage  gcp для хранения state file terraform при помощи подключения модуля из репозитория terraform  
 Попробывал вынести tfstate в хранилище gcp
+
+#Ansible-1
+После выполнения ansible app -m command -a 'rm -rf ~/reddit' и повторного выполнения ansible-playbook clone.yml change стал 1 так как изменилась файловая структура на сервере при повторном выполнении change 0
