@@ -83,3 +83,4 @@ packer build --var-file=ВАШ_VARFILE  ubuntu16.json
 
 #Ansible-1
 После выполнения ansible app -m command -a 'rm -rf ~/reddit' и повторного выполнения ansible-playbook clone.yml change стал 1 так как изменилась файловая структура на сервере при повторном выполнении change 0
+Добавлен dynamic inventory inv.sh
