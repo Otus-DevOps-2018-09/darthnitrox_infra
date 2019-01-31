@@ -3,7 +3,7 @@
   hosts: all
   vars:
     mongo_bind_ip: 0.0.0.0
-    db_host: 10.132.0.11
+    db_host: 10.132.0.12
   tasks:
     - name: Change mongo config file
       become: true
@@ -22,11 +22,11 @@
       tags: app-tag
       notify: reload puma
 
-    - name: Change mongo config file
+    - name: Add database config file for app connect
       become: true
       template:
-        src: templates/mongod.conf.j2
-        dest: /etc/mongod.conf
+        src: templates/db_config.j2
+        dest: /home/appuser/db_config
         mode: 0644
       tags: app-tag
 
