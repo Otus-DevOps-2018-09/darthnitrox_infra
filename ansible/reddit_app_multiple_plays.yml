@@ -11,7 +11,6 @@
         src: templates/mongod.conf.j2
         dest: /etc/mongod.conf
         mode: 0644
-      tags: db-tag
       notify: restart mongod
 
   handlers:  
@@ -20,12 +19,12 @@
         name: mongod
         state: restarted
 
-- name: Configure hosts & deploy application
+- name: Configure App
   hosts: app
   tags: app-tag
   become: true
   vars:
-    db_host: 10.132.0.12
+    db_host: 10.132.0.13
   tasks:
 
     - name: Add unit file for Puma
@@ -47,3 +46,25 @@
   handlers:
     - name: reload puma
       systemd: name=puma state=restarted
+
+- name: Deploy and Boundle App
+  hosts: app
+  tags: deploy-tag
+  tasks:
+    - name: Fetch the latest version of application code 
+      git:
+        repo: 'https://github.com/express42/reddit.git'
+        dest: /home/appuser/reddit
+        version: monolith
+      notify: restart puma
+
+    - name: Bundle install
+      bundler:
+        state: present
+        chdir: /home/appuser/reddit
+
+  handlers:
+    - name: restart puma
+      become: true
+      systemd: name=puma state=restarted
+      

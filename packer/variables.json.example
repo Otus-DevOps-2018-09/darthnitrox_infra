@@ -1,4 +1,0 @@
-{
-    "project_id" : "project identificator (gcloud project list)",
-    "source_image_family": "Image family"
-}
