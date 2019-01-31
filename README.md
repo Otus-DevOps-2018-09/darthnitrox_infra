@@ -74,3 +74,9 @@ packer build --var-file=ВАШ_VARFILE  ubuntu16.json
 ```
 
 После добавления ключа в metadata и запуска terraform отработал успешно
+
+# Terraform-2
+Было выполнено разделение main.tf на несколько модулей app и db было вынесено в параметизированы некоторые свойства модулей ip,firewall,disk_image and etc  
+Было разделено по окружением вызов модулей (prod,stage)
+Были созданы storage  gcp для хранения state file terraform при помощи подключения модуля из репозитория terraform  
+Попробывал вынести tfstate в хранилище gcp
