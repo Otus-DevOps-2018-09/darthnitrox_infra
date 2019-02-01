@@ -81,6 +81,9 @@ packer build --var-file=ВАШ_VARFILE  ubuntu16.json
 Были созданы storage  gcp для хранения state file terraform при помощи подключения модуля из репозитория terraform  
 Попробывал вынести tfstate в хранилище gcp
 
-#Ansible-1
+# Ansible-1
 После выполнения ansible app -m command -a 'rm -rf ~/reddit' и повторного выполнения ansible-playbook clone.yml change стал 1 так как изменилась файловая структура на сервере при повторном выполнении change 0
-Добавлен dynamic inventory inv.sh
+Добавлен dynamic inventory inv.sh  
+
+# Ansible-2  
+Были созданые playbook для развертывания db server с MangoDB и playbook для развертывания APP с ruby playbook для развертывания приложения плейбуки для packer подготовки образа прилоежния и образа БД
