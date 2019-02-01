@@ -2,7 +2,7 @@
 - name: Show env
   debug:
     msg: "This host is in {{ env }} enviroment!!!"
-   
+
 - name: Change mongo config file
   template:
     src:  mongod.conf.j2

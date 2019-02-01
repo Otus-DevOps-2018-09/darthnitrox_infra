@@ -2,9 +2,9 @@
 - name: Show env
   debug:
     msg: "This host is in {{ env }} enviroment!!!"
-    
+
 - name: Add unit file for Puma
-  copy: 
+  copy:
     src: puma.service
     dest: /etc/systemd/system/puma.service
   notify: reload puma
@@ -18,4 +18,3 @@
 
 - name: enable puma
   systemd: name=puma enabled=yes
-  
