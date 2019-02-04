@@ -86,4 +86,7 @@ packer build --var-file=ВАШ_VARFILE  ubuntu16.json
 Добавлен dynamic inventory inv.sh  
 
 # Ansible-2  
-Были созданые playbook для развертывания db server с MangoDB и playbook для развертывания APP с ruby playbook для развертывания приложения плейбуки для packer подготовки образа прилоежния и образа БД
+Были созданые playbook для развертывания db server с MangoDB и playbook для развертывания APP с ruby playbook для развертывания приложения плейбуки для packer подготовки образа прилоежния и образа БД  
+
+# Ansible-3
+Выделил роли для подъема сервисов app и db. Добавил роль  из репозитория ansible-galaxy nginx для настройки проксирования на приложение. Добавил плейбук для добавления пользователей на сервер. Добавлено в terraform модуль vpc ресур по управлению правилом firewall http 80 порт aacept
