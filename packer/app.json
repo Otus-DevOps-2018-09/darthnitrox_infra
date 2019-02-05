@@ -11,7 +11,7 @@
         {
             "type": "googlecompute",
             "project_id": "{{user `project_id`}}",
-            "image_name": "reddit-app-base-{{ `timestamp` }}",
+            "image_name": "reddit-app-base-{{timestamp}}",
             "image_family": "application",
             "image_description": "Application Image reddit app",
             "source_image_family": "{{user `source_image_family`}}",
@@ -28,6 +28,8 @@
     "provisioners" : [
         {
                 "type": "ansible",
+                "extra_arguments": ["--tags","ruby"],
+                "ansible_env_vars": ["ANSIBLE_ROLES_PATH={{ pwd }}/ansible/roles"],
                 "playbook_file": "ansible/playbooks/packer_app.yml"
         }
     ]
