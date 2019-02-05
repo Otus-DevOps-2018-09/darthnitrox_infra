@@ -2,6 +2,6 @@
 - name: Show env
   debug:
     msg: "This host is in {{ env }} enviroment!!!"
-    
+
 - include: install_ruby.yml
 - include: configure_app.yml
