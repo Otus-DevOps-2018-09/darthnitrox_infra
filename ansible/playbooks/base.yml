@@ -7,4 +7,4 @@
   tasks:
     - name: Install Python for Ansible
       raw: test -e /sur/bin/python || (apt -y update && apt install -y python-minimal)
-      change_when: False
+      changed_when: False
