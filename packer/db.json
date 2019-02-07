@@ -11,7 +11,7 @@
         {
             "type": "googlecompute",
             "project_id": "{{user `project_id`}}",
-            "image_name": "reddit-db-base-1",
+            "image_name": "reddit-db-base-{{timestamp}}",
             "image_family": "mongodb",
             "image_description": "Database Image (MongoDB) for reddit app",
             "source_image_family": "{{user `source_image_family`}}",
@@ -28,6 +28,7 @@
     "provisioners" : [
         {
                 "type": "ansible",
+                "ansible_env_vars": ["ANSIBLE_ROLES_PATH={{ pwd }}/ansible/roles"],
                 "playbook_file": "ansible/playbooks/packer_db.yml"
         }
     ]
